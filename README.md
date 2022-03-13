@@ -2,7 +2,7 @@
 
 **Português:**
 
-Programas que escrevi para a disciplina de AEDS (**A**lgoritmos e **E**strutura de **D**ado**S**), período 2018/1. Na pasta "Misc" estão os códigos menos interessantes ou mais simples. Mesmo os que estão na pasta raiz não são complexos, mas podem servir como snippets. Não há garantia que todos funcionem. Foram escritos em ambiente Windows, por isso do *system("pause")* ao final dos programas. Todos os arquivos estão em português.
+Programas que escrevi para a disciplina de AEDS (**A**lgoritmo<ins>s</ins> e **E**strutura<ins>s</ins> de **D**ado<ins>**S**</ins>), período 2018/1. Na pasta "Misc" estão os códigos menos interessantes ou mais simples. Mesmo os que estão na pasta raiz não são complexos, mas podem servir como snippets. Não há garantia que todos funcionem. Foram escritos em ambiente Windows, por isso do *system("pause")* ao final dos programas. Todos os arquivos estão em português.
 \
 \
 \
