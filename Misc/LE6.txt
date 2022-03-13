@@ -1,0 +1,142 @@
+1 -----
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int converteMinuto(int hora, int minuto) {
+    return hora * 60 + minuto;
+}
+
+int diferencaMinutos(int hora1, int minuto1, int hora2, int minuto2) {
+    return converteMinuto(hora2, minuto2) - converteMinuto(hora1, minuto1);
+}
+
+int main(int argc, char *argv[]) {
+	int hora1, minuto1, hora2, minuto2;
+
+	printf("Digite o numero de horas do primeiro horario: ");
+	scanf("%d", &hora1);
+	printf("Digite o numero de minutos do primeiro horario: ");
+	scanf("%d", &minuto1);
+	printf("Digite o numero de horas do segundo horario: ");
+	scanf("%d", &hora2);
+	printf("Digite o numero de minutos do segundo horario: ");
+	scanf("%d", &minuto2);
+
+	printf("\nNumero de minutos do primeiro horario: %d\n", converteMinuto(hora1, minuto1));
+	printf("\nNumero de minutos do segundo horario: %d\n", converteMinuto(hora2, minuto2));
+
+	printf("\nDiferenca de minutos entre os horarios: %d\n\n", diferencaMinutos(hora1, minuto1, hora2, minuto2));
+
+	system("pause");
+	return 0;
+}
+
+2 -----
+
+#include <stdlib.h>
+#include <stdio.h>
+
+void imprimeDecrescente(int num1, int num2, int num3) {
+    if(num1 > num2) {
+        if(num2 > num3) {
+            printf("Ordem decrescente: %d, %d, %d\n\n", num1, num2, num3);
+            return;
+        }
+        else {
+            if(num1 > num3) {
+                printf("Ordem decrescente: %d, %d, %d\n\n", num1, num3, num2);
+                return;
+            }
+            else {
+                printf("Ordem decrescente: %d, %d, %d\n\n", num3, num1, num2);
+                return;
+            }
+        }
+    }
+    else {
+        if(num1 > num3) {
+            printf("Ordem decrescente: %d, %d, %d\n\n", num2, num1, num3);
+            return;
+        }
+        else {
+            if(num2 > num3) {
+                printf("Ordem decrescente: %d, %d, %d\n\n", num2, num3, num1);
+                return;
+            }
+            else {
+                printf("Ordem decrescente: %d, %d, %d\n\n", num3, num2, num1);
+                return;
+            }
+        }
+    }
+}
+
+int main(int argc, char *argv[]) {
+	int num1, num2, num3;
+
+	printf("Digite o primeiro numero: ");
+	scanf("%d", &num1);
+	printf("Digite o segundo numero: ");
+	scanf("%d", &num2);
+	printf("Digite o terceiro numero: ");
+	scanf("%d", &num3);
+
+    imprimeDecrescente(num1, num2, num3);
+
+	system("pause");
+	return 0;
+}
+
+3 -----
+
+#include <stdlib.h>
+#include <stdio.h>
+
+float media(float num1, float num2) {
+    return (num1 + num2) / 2;
+}
+
+char *situacao(float media) {
+    if(media >= 60.0)
+        return "Aprovado";
+    else
+        return "Reprovado";
+}
+
+float percentualFaltas(int aulas, int presencas) {
+    return (1 - ((float) presencas / aulas)) * 100;
+}
+
+int main(int argc, char *argv[]) {
+	int totalAulas, matricula, presenca;
+	float prova1, prova2, trab1, trab2, mediaProvas, mediaTrab, mediaFinal;
+
+	printf("Digite o numero de aulas da turma: ");
+	scanf("%d", &totalAulas);
+	printf("Digite o numero de matricula do aluno: ");
+	scanf("%d", &matricula);
+	printf("Digite a nota da primeira prova: ");
+	scanf("%f", &prova1);
+	printf("Digite a nota da segunda prova: ");
+	scanf("%f", &prova2);
+	printf("Digite a nota do primeiro trabalho: ");
+	scanf("%f", &trab1);
+	printf("Digite a nota do segundo trabalho: ");
+	scanf("%f", &trab2);
+	printf("Digite o numero de presencas do aluno: ");
+	scanf("%d", &presenca);
+
+    printf("\nNumero de matricula do aluno: %d\n", matricula);
+    mediaProvas = media(prova1, prova2);
+    printf("Media das provas: %.2f\n", mediaProvas);
+    mediaTrab = media(trab1, trab2);
+    printf("Media dos trabalhos: %.2f\n", mediaTrab);
+    mediaFinal = media(mediaProvas, mediaTrab);
+    printf("Media final: %.2f\n", mediaFinal);
+    printf("Situacao: %s\n", situacao(mediaFinal));
+    printf("Percentual de faltas: %.2f\n", percentualFaltas(totalAulas, presenca));
+
+	system("pause");
+	return 0;
+}

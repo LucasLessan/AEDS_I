@@ -1,0 +1,62 @@
+1 ----- 
+
+	int num1, num2;
+
+	printf("Digite o primeiro numero inteiro: \n");
+	scanf("%d", &num1);
+	printf("Digite o segundo numero inteiro: \n");
+	scanf("%d", &num2);
+
+	printf("Num1 + Num2 = %d\n", num1 + num2);
+	printf("Num1 - Num2 = %d\n", num1 - num2);
+	printf("Num1 * Num2 = %d\n", num1 * num2);
+	printf("Num1 / Num2 = %d\n", num1 / num2);
+	printf("Num1 %% Num2 = %d\n", num1 % num2);
+
+2 -----
+
+	int seg;
+
+	printf("Digite o valor em segundos: \n");
+	scanf("%d", &seg);
+	printf("%d:%d:%d\n", seg / 3600, (seg % 3600) / 60, seg % 60);
+
+3 -----
+
+	float real;
+
+	printf("Digite o numero real: \n");
+	scanf("%f", &real);
+	printf("Parte inteira: %d\n", (int) real);
+	printf("Parte fracionaria: %f\n", real - (int) real)
+
+4 -----
+
+	float raio;
+
+	printf("Digite o raio da circunferencia: \n");
+	scanf("%f", &raio);
+	printf("Area: %f\n", PI * pow(raio, 2));
+	printf("Circunferencia: %f\n", PI * 2 * raio);
+
+5 ----- 
+
+	char caractere;
+
+	printf("Digite um caractere: \n");
+	scanf("%c", &caractere);
+	printf("Caractere: %c\n", caractere);
+
+6 -----
+
+	int saque;
+
+	printf("Digite o valor do saque em reais: \n");
+	scanf("%d", &saque);
+	printf("Notas de R$ 100,00: %d\n", saque / 100);
+	printf("Notas de R$ 50,00: %d\n", (saque % 100) / 50);
+	printf("Notas de R$ 20,00: %d\n", (saque % 50) / 20);
+	printf("Notas de R$ 10,00: %d\n", ((saque % 50) % 20) / 10);
+	printf("Notas de R$ 5,00: %d\n", (saque % 10) / 5);
+	printf("Notas de R$ 2,00: %d\n", (saque % 5) / 2);
+	printf("Notas de R$ 1,00: %d\n", ((saque % 5) % 2) / 1);

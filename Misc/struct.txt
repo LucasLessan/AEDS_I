@@ -1,0 +1,74 @@
+1 -----
+
+typedef struct ponto {
+	double x;
+	double y;
+};
+
+2 -----
+
+ponto atribuiValorPonto(double a, double b) {
+	ponto p;
+	
+	p.x = a;
+	p.y = b;
+
+	return p;
+}
+
+3 -----
+
+typedef struct triangulo {
+	ponto p1;
+	ponto p2;
+	ponto p3;
+};
+
+4 -----
+
+double perimetro(triangulo t) {
+	return sqrt(pow(t.p2.x - t.p1.x, 2) + pow(t.p2.y - t.p1.y)) + sqrt(pow(t.p3.x - t.p2.x, 2) + pow(t.p3.y - t.p2.y)) + sqrt(pow(t.p1.x - t.p3.x, 2) + pow(t.p1.y - t.p3.y));
+}
+
+5 -----
+
+double area(triangulo t) {
+	return sqrt(perimetro(t) / 2 * (perimetro(t) / 2 - sqrt(pow(t.p2.x - t.p1.x, 2) + pow(t.p2.y - t.p1.y))) * (perimetro(t) / 2 - sqrt(pow(t.p3.x - t.p2.x, 2) + pow(t.p3.y - t.p2.y))) * (perimetro(t) / 2 - sqrt(pow(t.p1.x - t.p3.x, 2) + pow(t.p1.y - t.p3.y)));
+}
+
+6 -----
+
+int equilatero(triangulo t) {
+	if(sqrt(pow(t.p2.x - t.p1.x, 2) + pow(t.p2.y - t.p1.y)) == sqrt(pow(t.p3.x - t.p2.x, 2) + pow(t.p3.y - t.p2.y)) && sqrt(pow(t.p3.x - t.p2.x, 2) + pow(t.p3.y - t.p2.y)) == sqrt(pow(t.p1.x - t.p3.x, 2) + pow(t.p1.y - t.p3.y)))
+		return 1;
+	return 0;
+}
+
+7 -----
+
+typedef struct circunferencia {
+	ponto centro;
+	double raio;
+};
+
+8 -----
+
+#define PI 3.14159
+
+double perimetroCircunferencia(circunferencia c) {
+	return 2 * PI * c.raio;
+}
+
+9 -----
+
+double areaCircunferencia(circunferencia c) {
+	return PI * pow(c.raio, 2);
+}
+
+10 -----
+
+int testaPonto(circunferencia c, ponto p) {
+	if(sqrt(pow(p.x - c.centro.x, 2) + pow(p.y - c.centro.y, 2)) <= raio)
+		return 1;
+	return 0;
+}

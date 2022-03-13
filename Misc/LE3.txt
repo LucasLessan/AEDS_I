@@ -1,0 +1,111 @@
+1 -----
+
+	float num1, num2;
+
+	printf("Digite o valor do primeiro numero: \n");
+	scanf("%f", &num1);
+	printf("Digite o valor do segundo numero: \n");
+	scanf("%f", &num2);
+
+	if(num1 > num2)
+		printf("O segundo numero e' o menor.\n");
+    	else
+		if(num1 == num2)
+			printf("Os numeros sao iguais.\n");
+		else
+			printf("O primeiro numero e' o menor.\n");
+
+2 -----
+
+	int num;
+
+	printf("Digite um valor inteiro positivo: \n");
+	scanf("%d", &num);
+
+	if(num <= 0)
+		printf("Valor invalido!\n");
+	else
+		if(num % 2 == 0)
+			printf("Numero par.\n");
+		else
+			printf("Numero impar.\n");
+
+3 -----
+
+	int idade;
+
+	printf("Digite a idade do nadador (min: 5): \n");
+	scanf("%d", &idade);
+
+	if(idade < 5)
+		printf("Valor invalido!\n");
+	else
+		if(idade < 8)
+			printf("Infantil A.\n");
+		else
+			if(idade < 11)
+				printf("Infantil B.\n");
+			else
+				if(idade < 14)
+					printf("Juvenil A.\n");
+				else
+					if(idade < 18)
+						printf("Juvenil B.\n");
+					else
+						printf("Senior.\n");
+
+4 -----
+
+	char sexo;
+	float altura;
+
+	printf("Digite o sexo da pessoa: \n");
+	scanf("%c", &sexo);
+	
+	if(sexo == 'h' || sexo == 'H') {
+        	printf("Digite a altura do homem: \n");
+        	scanf("%f", &altura);
+        	printf("Peso ideal: %.2f.\n", (72.7 * altura) - 58);
+	}
+	else
+		if(sexo == 'm' || sexo == 'M') {
+			printf("Digite a altura da mulher: \n");
+			scanf("%f", &altura);
+			printf("Peso ideal: %.2f.\n", (62.1 * altura) - 44.7);
+		}
+		else
+			printf("Valor invalido!\n");
+
+5 -----
+
+	char sexo;
+	float altura;
+
+	printf("Digite o sexo da pessoa: \n");
+	scanf("%c", &sexo);
+	
+	switch(sexo) {
+		case 'h':
+			printf("Digite a altura do homem: \n");
+			scanf("%f", &altura);
+			printf("Peso ideal: %.2f.\n", (72.7 * altura) - 58);
+			break;
+        case 'H':
+            printf("Digite a altura do homem: \n");
+            scanf("%f", &altura);
+            printf("Peso ideal: %.2f.\n", (72.7 * altura) - 58);
+            break;
+        case 'm':
+            printf("Digite a altura da mulher: \n");
+            scanf("%f", &altura);
+            printf("Peso ideal: %.2f.\n", (62.1 * altura) - 44.7);
+            break;
+        case 'M':
+            printf("Digite a altura da mulher: \n");
+            scanf("%f", &altura);
+            printf("Peso ideal: %.2f.\n", (62.1 * altura) - 44.7);
+            break;
+        default:
+            printf("Valor invalido!\n");
+	}
+
